@@ -1,0 +1,294 @@
+<!-- save as support.html and open in a browser -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Antishield — Contact Support</title>
+<style>
+  /* Simple reset + base */
+  :root{
+    --brand-1:#0033a0;
+    --brand-2:#0066d6;
+    --accent:#ff3366;
+    --muted:#6b7280;
+    --card-bg:#ffffff;
+    --page-bg:#f4f6fa;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    background:var(--page-bg);
+    color:#111827;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* header */
+  .topbar{
+    background:linear-gradient(90deg,var(--brand-1),var(--brand-2));
+    color:white;
+    padding:18px 24px;
+    display:flex;
+    gap:16px;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .brand .logo{
+    width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#002b7f,#004fc2);
+    display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:18px;
+  }
+  .brand h1{font-size:18px;margin:0}
+  .top-actions{display:flex;gap:12px;align-items:center}
+  .top-actions a{color:white;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.06)}
+
+  /* main hero area */
+  .hero{
+    max-width:1100px;margin:28px auto;padding:22px;background:linear-gradient(180deg,rgba(255,255,255,0.95),transparent);
+    display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:center;
+  }
+  @media (max-width:900px){ .hero{grid-template-columns:1fr; padding:16px} }
+
+  .hero-left h2{margin:0 0 8px 0;font-size:26px}
+  .hero-left p{margin:0 0 16px;color:var(--muted)}
+  .contact-cards{display:flex;gap:12px;flex-wrap:wrap}
+  .card{
+    background:var(--card-bg);border-radius:12px;padding:14px;box-shadow:0 8px 20px rgba(13,30,60,0.06);
+    display:flex;gap:12px;align-items:center;min-width:220px;
+  }
+  .card .icon{
+    width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
+    display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
+  }
+  .card .meta{font-size:14px}
+  .card .meta .title{font-weight:700}
+
+  /* right column (primary CTA) */
+  .hero-right{
+    background:linear-gradient(180deg,#ffffff, #f7fbff);
+    border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(3,27,79,0.06);
+  }
+  .phone-big{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+  .phone-big .num{font-size:22px;font-weight:700;color:var(--brand-1)}
+  .phone-big .btn{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+  .small{
+    display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;
+  }
+  .small button{padding:10px 12px;border-radius:10px;border:1px solid #e6edf8;background:white;cursor:pointer}
+
+  /* search help */
+  .help-search{margin-top:18px;display:flex;gap:8px}
+  .help-search input{flex:1;padding:12px;border-radius:10px;border:1px solid #e6edf8}
+  .help-search button{padding:12px 16px;border-radius:10px;background:var(--brand-1);color:white;border:none;cursor:pointer;font-weight:700}
+
+  /* support methods */
+  .methods{
+    max-width:1100px;margin:18px auto;padding:0 22px 22px 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  }
+  @media (max-width:900px){ .methods{grid-template-columns:1fr} }
+  .method{
+    background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(3,27,79,0.05);
+  }
+  .method h4{margin:0 0 6px 0}
+  .method p{margin:0;color:var(--muted);font-size:14px}
+
+  /* FAQ */
+  .faq{
+    max-width:1100px;margin:18px auto;padding:20px;border-radius:12px;
+  }
+  .faq .item{background:var(--card-bg);border-radius:10px;padding:10px 14px;margin-bottom:10px;border:1px solid #eef4ff;}
+  .faq summary{font-weight:700;cursor:pointer}
+  .faq p{margin:8px 0 0 0;color:var(--muted)}
+
+  /* footer */
+  footer{max-width:1100px;margin:22px auto;padding:18px;color:var(--muted);font-size:13px;text-align:center}
+  footer a{color:var(--brand-1);text-decoration:none}
+
+  /* small helper */
+  .muted{color:var(--muted);font-size:13px}
+  .country-select{display:flex;gap:8px;align-items:center;margin-top:8px}
+  select{padding:8px;border-radius:8px;border:1px solid #e6edf8}
+</style>
+</head>
+<body>
+
+  <header class="topbar" role="banner">
+    <div class="brand">
+      <div class="logo" aria-hidden>AS</div>
+      <div>
+        <h1>Antishield Support</h1>
+        <div style="font-size:13px;color:rgba(255,255,255,0.9)">Official help & customer support</div>
+      </div>
+    </div>
+
+    <div class="top-actions" role="navigation" aria-label="top actions">
+      <a href="#kb">Knowledge Base</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#account">My Account</a>
+    </div>
+  </header>
+
+  <!-- HERO / Primary contact area -->
+  <main>
+    <section class="hero" role="main" aria-labelledby="support-heading">
+      <div class="hero-left">
+        <h2 id="support-heading">We're here to help — contact Antishield Support</h2>
+        <p class="muted">Quick self-help resources are available 24/7. If you prefer, call us, start a chat, or request a callback from our agents.</p>
+
+        <div class="contact-cards" aria-hidden>
+          <div class="card" role="group" aria-label="phone">
+            <div class="icon">📞</div>
+            <div class="meta">
+              <div class="title">Call Us</div>
+              <div class="muted">Toll-free (USA): <strong>1-866-622-3911</strong></div>
+            </div>
+          </div>
+
+          <div class="card" role="group" aria-label="chat">
+            <div class="icon">💬</div>
+            <div class="meta">
+              <div class="title">Live Chat</div>
+              <div class="muted">Connect instantly with a support agent</div>
+            </div>
+          </div>
+
+          <div class="card" role="group" aria-label="support-portal">
+            <div class="icon">📚</div>
+            <div class="meta">
+              <div class="title">Self Help</div>
+              <div class="muted">Search articles, downloads, and how-to guides</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search box (simulated local search) -->
+        <div class="help-search" role="search" aria-label="Search help">
+          <input id="helpQuery" placeholder="Search help articles: e.g. 'install', 'renew', 'scan'">
+          <button id="doSearch">Search</button>
+        </div>
+
+      </div>
+
+      <aside class="hero-right" aria-label="primary contact">
+        <div class="phone-big" role="region" aria-label="Phone contact">
+          <div class="muted">Call support (USA)</div>
+          <div class="num" id="primaryNumber">1-866-622-3911</div>
+          <div class="muted">Hours: <strong>24/7</strong></div>
+          <div style="margin-top:12px">
+            <a class="btn" href="tel:18666223911">Call Now</a>
+            <a class="btn" href="#" id="requestCallback" style="background:#0b63d6;margin-left:8px">Request callback</a>
+          </div>
+
+          <div style="margin-top:16px;">
+            <div class="muted">Other ways to reach us</div>
+            <div class="small">
+              <button id="startChat">Start Live Chat</button>
+              <button id="openTicket">Open Support Ticket</button>
+            </div>
+          </div>
+
+          <div class="country-select" style="margin-top:14px;">
+            <label class="muted" for="country">Country:</label>
+            <select id="country">
+              <option value="us" selected>United States</option>
+              <option value="gb">United Kingdom</option>
+              <option value="ca">Canada</option>
+              <option value="in">India</option>
+              <option value="au">Australia</option>
+            </select>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Methods (Chat / Phone / Ticket) -->
+    <section class="methods" aria-label="Support methods">
+      <div class="method" id="kb">
+        <h4>Knowledge Base</h4>
+        <p>Find guides for installation, activation, scanning, and troubleshooting.</p>
+      </div>
+
+      <div class="method" id="downloads">
+        <h4>Downloads & Updates</h4>
+        <p>Download the latest installers, updates, and manual updates for offline systems.</p>
+      </div>
+
+      <div class="method" id="account">
+        <h4>Account & Billing</h4>
+        <p>Manage subscriptions, renewals, and billing details from your account portal.</p>
+      </div>
+    </section>
+
+    <!-- FAQ accordion -->
+    <section class="faq" aria-label="Popular questions">
+      <h3 style="margin:0 0 12px 0">Popular questions</h3>
+
+      <details class="item">
+        <summary>How do I install Antishield on Windows?</summary>
+        <p>Download the installer from the Downloads page and run it as Administrator. Follow on-screen steps. If prompted to remove other antivirus software, follow the instructions.</p>
+      </details>
+
+      <details class="item">
+        <summary>How do I renew my subscription?</summary>
+        <p>Sign into your account, go to Subscriptions and choose Renew. You can also renew via phone with billing support.</p>
+      </details>
+
+      <details class="item">
+        <summary>I found a suspicious file — what do I do?</summary>
+        <p>Isolate the file, run a full system scan, and contact support with scan logs if the threat persists.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div>Need extra help? Email: <a href="mailto:support@antishield.example">support@antishield.example</a> • Phone (USA): <strong>1-866-622-3911</strong></div>
+    <div style="margin-top:8px;color:var(--muted)">© <span id="year"></span> Antishield. All rights reserved.</div>
+  </footer>
+
+<script>
+  // small UI behavior (demo only)
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('doSearch').addEventListener('click', function(){
+    const q = document.getElementById('helpQuery').value.trim();
+    if(!q){ alert('Try searching for: install, renew, scan, activation'); return; }
+    // This demo performs a local simulated search; connect to your KB API to show real results.
+    alert('Searching support articles for: ' + q + '\\n\\n(In a live site this would query your knowledge-base.)');
+  });
+
+  document.getElementById('startChat').addEventListener('click', function(e){
+    e.preventDefault();
+    alert('Opening live chat... (wire up to your chat provider like Intercom/Drift/LivePerson)');
+  });
+
+  document.getElementById('openTicket').addEventListener('click', function(e){
+    e.preventDefault();
+    // open ticket modal / link
+    alert('Opening ticket form... (replace with a modal or link to your ticketing system)');
+  });
+
+  document.getElementById('requestCallback').addEventListener('click', function(e){
+    e.preventDefault();
+    const country = document.getElementById('country').value;
+    alert('Callback requested for country: ' + country + '\\nOur agents will call you within the next available slot.');
+  });
+
+  // country selector could change displayed phone number (demo mapping)
+  const numberMap = { us:'1-866-622-3911', gb:'+44-800-123-4567', ca:'1-888-847-8766', in:'+91-80-1234-5678', au:'+61-2-9000-0000' };
+  document.getElementById('country').addEventListener('change', function(){
+    const num = numberMap[this.value] || '1-866-622-3911';
+    document.getElementById('primaryNumber').textContent = num;
+  });
+</script>
+
+</body>
+</html>

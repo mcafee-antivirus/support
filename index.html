@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Americañ Airlines</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+
+    body { background: #f4f6fa; color: #333; }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #002b7f, #0059d4);
+      padding: 25px 50px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 { font-size: 32px; }
+
+    nav a {
+      margin-left: 30px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+    nav a:hover { opacity: 0.7; }
+
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1529074963764-98f45c47344b?auto=format&fit=crop&w=1500&q=80') no-repeat center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      position: relative;
+      filter: brightness(90%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      filter: brightness(100%);
+  
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+    }
+
+    .hero h2 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .hero p { font-size: 20px; margin-bottom: 35px; }
+
+    .btn-primary {
+      display: inline-block;
+      background: #ff3366;
+      padding: 14px 34px;
+      color: white;
+      font-size: 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover { background: #e02b59; transform: scale(1.05); }
+
+    .section { padding: 80px 60px; text-align: center; }
+    .section h3 { font-size: 38px; margin-bottom: 25px; }
+    .section p { max-width: 800px; margin: auto; font-size: 18px; line-height: 1.7; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover { transform: translateY(-10px); }
+
+    .destinations {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: scale(1.03); }
+
+    .card img { width: 100%; height: 220px; object-fit: cover; }
+
+    .card .info {
+      padding: 20px;
+      text-align: left;
+    }
+
+    footer {
+      background: #002b7f;
+      color: white;
+      padding: 40px;
+      text-align: center;
+      margin-top: 70px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Americañ Airlines</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#fleet">Fleet</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home" style="position: relative;">
+  <style>
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+       /* DARKER OVERLAY FOR CLEAR TEXT */
+    }
+    .hero-content h2, .hero-content p { text-shadow: 0 4px 12px rgba(0,0,0,0.7); }
+  </style>
+
+  <div class="hero-content" style="position: relative;">
+    <h2 style="color: #ffffff; font-weight: 700; text-shadow: 0 6px 18px rgba(0,0,0,0.85);">Fly Beyond Expectations</h2>
+    <p style="color: #f1f1f1; font-size: 20px; font-weight: 500; text-shadow: 0 4px 14px rgba(0,0,0,0.9);">Experience unmatched comfort, luxury, and global connectivity with Americañ Airlines.</p>
+    <a href="#" class="btn-primary">Start Your Journey</a>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h3>About Americañ Airlines</h3>
+  <p>We redefine the skies with world-class service, modern technology, and global coverage. Our mission is to provide safe, comfortable, and premium travel experiences to passengers across the globe.</p>
+
+  <div class="features">
+    <div class="feature-box">
+      <h4>✈ Ultra-Modern Fleet</h4>
+      <p>Equipped with next-generation aircraft, ensuring smooth and efficient flights.</p>
+    </div>
+    <div class="feature-box">
+      <h4>🌍 Worldwide Coverage</h4>
+      <p>Connecting you to 150+ destinations with seamless flight networks.</p>
+    </div>
+    <div class="feature-box">
+      <h4>⭐ Luxury Experience</h4>
+      <p>Enjoy fine dining, spacious seating, and personalized service onboard.</p>
+    </div>
+    <div class="feature-box">
+      <h4>🛡️ Safety First</h4>
+      <p>With strict safety protocols, we prioritize your well-being at every step.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="destinations">
+  <h3>Top Destinations</h3>
+
+  <div class="destinations">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80" />
+      <div class="info">
+        <h4>New York, USA</h4>
+        <p>The city that never sleeps — full of life, lights, and possibilities.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?auto=format&fit=crop&w=1200&q=80" />
+      <div class="info">
+        <h4>Tokyo, Japan</h4>
+        <p>Where tradition meets futuristic innovation and stunning cityscapes.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1200&q=80" />
+      <div class="info">
+        <h4>Paris, France</h4>
+        <p>The romantic capital of the world — fashion, art, and elegance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fleet">
+  <h3>Our Premium Fleet</h3>
+  <p>We operate the world's most advanced aircraft, offering comfort, reliability, and efficiency.</p>
+
+  <div class="features">
+    <div class="feature-box">
+      <h4>Boeing 787 Dreamliner</h4>
+      <p>Fuel-efficient, quiet, and built for long-haul luxury.</p>
+    </div>
+    <div class="feature-box">
+      <h4>Airbus A350</h4>
+      <p>Spacious cabins, advanced aerodynamics, and top safety ratings.</p>
+    </div>
+    <div class="feature-box">
+      <h4>Boeing 777X</h4>
+      <p>Next-gen widebody aircraft offering superior comfort and range.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h3>Contact Us</h3>
+  <p style="font-size: 20px; margin-top: 15px;">📞 Phone: <strong>(234) 876-3034</strong></p>
+</section>
+
+<footer>
+  © 2025 Americañ Airlines — All Rights Reserved
+</footer>
+
+</body>
+</html>
